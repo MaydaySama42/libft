@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_str_isempty.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdalil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 17:11:13 by mdalil            #+#    #+#             */
-/*   Updated: 2017/11/09 02:34:59 by mdalil           ###   ########.fr       */
+/*   Created: 2017/11/09 01:36:42 by mdalil            #+#    #+#             */
+/*   Updated: 2017/11/09 02:34:11 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *str)
+int	ft_str_isempty(char *str)
 {
-	char	*dup;
+	int	i;
 
-	if (!str)
-		return (NULL);
-	CHECK((dup = malloc(sizeof(char) * (ft_strlen(str) + 1))));
-	ft_memset(dup, 0, ft_strlen(str) + 1);	
-	ft_strcat(dup, str);
-	return (dup);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] != ' ')
+			return (0);
+		i++;
+	}
+	return (1);
 }

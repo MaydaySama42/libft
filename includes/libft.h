@@ -46,6 +46,7 @@ void				ft_putnbr(int n);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putstr(char const *s);
 int					ft_recursive_power(int nb, int power);
+int					ft_str_isempty(char *str);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);

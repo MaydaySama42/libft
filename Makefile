@@ -42,6 +42,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_putstr_fd.c\
 		ft_putstr.c\
 		ft_recursive_power.c\
+		ft_str_isempty.c\
 		ft_strcat.c\
 		ft_strchr.c\
 		ft_strclr.c\
