@@ -85,7 +85,7 @@ char		**ft_strsplit(const char *s, char c)
 	len = 0;
 	if (!s)
 		return (NULL);
-	if (!(tab = (char**)malloc(sizeof(tab) * (count_words(s, c) + 1))))
+	if (!(tab = (char**)malloc(sizeof(char*) * (count_words(s, c) + 1))))
 		return (NULL);
 	while (i < count_words(s, c))
 	{
@@ -95,6 +95,6 @@ char		**ft_strsplit(const char *s, char c)
 		j += len;
 		i++;
 	}
-	tab[count_words(s, c)] = 0;
+	tab[count_words(s, c)] = NULL;
 	return (tab);
 }
