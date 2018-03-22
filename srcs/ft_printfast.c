@@ -27,10 +27,33 @@ int		ft_printfast(const char *format, ...)
 		{
 			(format++);
 			flag = get_flag(&format);
-			len += write_conv(va, &flag);
+			len += write_conv_fd(1, va, &flag);
 		}
 		if (*format)
 			write(1, (format++), 1);
+	}
+	va_end(va);
+	return (len);
+}
+
+int		ft_printfast_fd(int fd, const char *format, ...)
+{
+	t_flag	flag;
+	size_t	len;
+	va_list	va;
+
+	len = 0;
+	va_start(va, format);
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			(format++);
+			flag = get_flag(&format);
+			len += write_conv_fd(fd, va, &flag);
+		}
+		if (*format)
+			write(fd, (format++), 1);
 	}
 	va_end(va);
 	return (len);
