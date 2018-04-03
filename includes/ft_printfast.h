@@ -6,7 +6,7 @@
 /*   By: mdalil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 14:45:18 by mdalil            #+#    #+#             */
-/*   Updated: 2017/12/19 14:45:19 by mdalil           ###   ########.fr       */
+/*   Updated: 2018/04/03 16:30:01 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int						ft_printfast_fd(int fd, const char *format, ...);
 */
 t_flag					get_flag(const char **format);
 size_t					write_conv_fd(int fd, va_list va, t_flag *flag);
-size_t					ft_putstr_flag_fd(int fd, const char *str, t_flag *flag);
+size_t					ft_putstr_flag_fd(int fd,
+							const char *str, t_flag *flag);
 size_t					ft_putchar_flag_fd(int fd, char c, t_flag *flag);
 size_t					ft_putnbr_flag_fd(int fd, long long nb, t_flag flag);
 
