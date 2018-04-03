@@ -65,6 +65,7 @@ char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *str, const char *find, size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strrev(char *str);
+char				**ft_strsplit_charset(const char *s, char *c);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strstr(const char *str, const char *find);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);

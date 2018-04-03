@@ -61,6 +61,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_strnstr.c\
 		ft_strrchr.c\
 		ft_strrev.c\
+		ft_strsplit_charset.c\
 		ft_strsplit.c\
 		ft_strstr.c\
 		ft_strsub.c\
