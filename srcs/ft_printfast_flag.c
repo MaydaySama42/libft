@@ -34,7 +34,7 @@ t_flag	get_flag(const char **format)
 	return (flag);
 }
 
-size_t	write_conv(va_list va, t_flag *flag)
+size_t	write_conv(int fd, va_list va, t_flag *flag)
 {
 	size_t	len;
 
@@ -45,13 +45,13 @@ size_t	write_conv(va_list va, t_flag *flag)
 	flag->conv = (flag->conv == 'l') ? 3 : flag->conv;
 	flag->field = (flag->star) ? va_arg(va, int) : flag->field;
 	len = (flag->conv == 0) ?
-		ft_putstr_flag(va_arg(va, char*), flag) : len;
+		ft_putstr_flag_fd(fd, va_arg(va, char*), flag) : len;
 	len = (flag->conv == 1) ?
-		ft_putchar_flag((char)va_arg(va, int), flag) : len;
+		ft_putchar_flag_fd(fd, (char)va_arg(va, int), flag) : len;
 	len = (flag->conv == 2) ?
-		ft_putnbr_flag((long long)va_arg(va, int), *flag) : len;
+		ft_putnbr_flag_fd(fd, (long long)va_arg(va, int), *flag) : len;
 	len = (flag->conv == 3) ?
-		ft_putnbr_flag(va_arg(va, long long), *flag) : len;
+		ft_putnbr_flag_fd(fd, va_arg(va, long long), *flag) : len;
 	len = (flag->conv > 1 && flag->field > len) ? flag->field : len;
 	return (len);
 }

@@ -19,7 +19,7 @@ int	ft_str_isempty(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] != ' ')
+		if (str[i] != '\n'&& str[i] != '\t' && str[i] != ' ')
 			return (0);
 		i++;
 	}
