@@ -28,12 +28,13 @@ typedef struct			s_flag
 /*
 **	ft_printfast
 */
-int						ft_printfast(int fd, const char *format, ...);
+int						ft_printfast(const char *format, ...);
+int						ft_printfast_fd(int fd, const char *format, ...);
 /*
 **	functions
 */
 t_flag					get_flag(const char **format);
-size_t					write_conv(int fd, va_list va, t_flag *flag);
+size_t					write_conv_fd(int fd, va_list va, t_flag *flag);
 size_t					ft_putstr_flag_fd(int fd, const char *str, t_flag *flag);
 size_t					ft_putchar_flag_fd(int fd, char c, t_flag *flag);
 size_t					ft_putnbr_flag_fd(int fd, long long nb, t_flag flag);

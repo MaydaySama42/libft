@@ -27,7 +27,7 @@ size_t		ft_putstr_flag_fd(int fd, const char *str, t_flag *flag)
 		while (!flag->just && flag->field-- > str_len)
 			write(fd, " ", 1);
 	}
-	write(1, ((str) ? str : "(null)"), str_len);
+	write(fd, ((str) ? str : "(null)"), str_len);
 	if (flag)
 	{
 		while (flag->just && flag->field-- > str_len)
@@ -46,7 +46,7 @@ size_t		ft_putchar_flag_fd(int fd, char c, t_flag *flag)
 		while (!flag->just && flag->field-- > 1)
 			write(fd, " ", 1);
 	}
-	write(1, &c, 1);
+	write(fd, &c, 1);
 	if (flag)
 	{
 		while (flag->just && flag->field-- > 1)
