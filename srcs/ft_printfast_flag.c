@@ -34,7 +34,7 @@ t_flag	get_flag(const char **format)
 	return (flag);
 }
 
-size_t	write_conv(int fd, va_list va, t_flag *flag)
+size_t	write_conv_fd(int fd, va_list va, t_flag *flag)
 {
 	size_t	len;
 

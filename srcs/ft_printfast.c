@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "ft_printfast.h"
 
-int		ft_printfast(int fd, const char *format, ...)
+int		ft_printfast(const char *format, ...)
 {
 	t_flag	flag;
 	size_t	len;
@@ -30,7 +30,7 @@ int		ft_printfast(int fd, const char *format, ...)
 			len += write_conv_fd(1, va, &flag);
 		}
 		if (*format)
-			write(fd, (format++), 1);
+			write(1, (format++), 1);
 	}
 	va_end(va);
 	return (len);
