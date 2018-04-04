@@ -38,7 +38,8 @@ char		*ft_u_b(unsigned long long n, int base)
 	if (n == 0)
 		return (ft_strdup("0"));
 	size = check_size(n, base);
-	CHECK((str = ft_strnew(size)));
+	if (!(str = ft_strnew(size)))
+		return (NULL);
 	while (n != 0)
 	{
 		num = n % base;

@@ -52,7 +52,8 @@ char		*ft_l_b(long long n, int base)
 		return (ft_strdup("-9223372036854775808"));
 	neg = check_neg(&n, base);
 	size = check_size(n, base) + neg;
-	CHECK((str = ft_strnew(size)));
+	if (!(str = ft_strnew(size)))
+		return (NULL);
 	while (n != 0)
 	{
 		num = n % base;

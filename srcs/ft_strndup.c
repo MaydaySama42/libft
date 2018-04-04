@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdalil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,15 +13,19 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strdup(const char *str)
+char	*ft_strndup(char *str, size_t n)
 {
 	char	*dup;
+	size_t	i;
 
-	if (!str)
+	i = 0;
+	if (!(dup = malloc(sizeof(char) * (n + 1))))
 		return (NULL);
-	if (!(dup = malloc(sizeof(char) * (ft_strlen(str) + 1))))
-		return (NULL);
-	ft_memset(dup, 0, ft_strlen(str) + 1);
-	ft_strcat(dup, str);
+	while (str[i] && i < n)
+	{
+		dup[i] = str[i];
+		i++;
+	}
+	dup[i] = 0;
 	return (dup);
 }
