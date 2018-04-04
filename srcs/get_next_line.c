@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fcntl.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
 int		fill_buffer(int fd, char **str)

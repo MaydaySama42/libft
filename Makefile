@@ -56,6 +56,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_strncat.c\
 		ft_strncmp.c\
 		ft_strncpy.c\
+		ft_strndup.c\
 		ft_strnequ.c\
 		ft_strnew.c\
 		ft_strnstr.c\
@@ -71,7 +72,8 @@ SRC_LIBFT = ft_atoi.c\
 		ft_printfast_flag_print.c\
 		ft_printfast_flag.c\
 		ft_printfast.c\
-		get_next_line.c
+		get_next_line.c\
+		read_stdin.c
 
 SRC = $(addprefix $(SRC_LIBFT_PATH)/,$(SRC_LIBFT))
 

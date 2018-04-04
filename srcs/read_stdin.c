@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   read_stdin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdalil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/07 22:54:05 by mdalil            #+#    #+#             */
-/*   Updated: 2018/03/07 22:54:34 by mdalil           ###   ########.fr       */
+/*   Created: 2018/03/07 22:53:56 by mdalil            #+#    #+#             */
+/*   Updated: 2018/03/07 22:53:57 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include <fcntl.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "libft.h"
 
-# include "libft.h"
+int	read_stdin(char **line)
+{
+	int		ret;
+	char	buff[BUFF_SIZE + 1];
+	char	*tmp;
 
-# define BUFF_SIZE	256
-
-int		get_next_line(int fd, char **line);
-int		read_stdin(char **line);
-
-#endif
+	while (!ft_strchr(buff, '\n'))
+	{
+		ft_memset(buff, 0, BUFF_SIZE + 1);
+		if ((ret = read(1, buff, BUFF_SIZE)))
+			break ;
+		tmp = *line;
+		(*line) = ft_strjoin(*line, buff);
+		if (tmp)
+			free(tmp);
+	}
+	return ((ret <= 0) ? ret : 1);
+}
