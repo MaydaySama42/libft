@@ -21,15 +21,18 @@ int	read_stdin(char **line)
 	char	buff[BUFF_SIZE + 1];
 	char	*tmp;
 
+	(*line) = ft_strnew(0);
+	ft_memset(buff, 0, BUFF_SIZE + 1);
 	while (!ft_strchr(buff, '\n'))
 	{
 		ft_memset(buff, 0, BUFF_SIZE + 1);
-		if ((ret = read(1, buff, BUFF_SIZE)))
+		if ((ret = read(1, buff, BUFF_SIZE)) < 0)
 			break ;
 		tmp = *line;
 		(*line) = ft_strjoin(*line, buff);
-		if (tmp)
-			free(tmp);
+		free(tmp);
+		if ((tmp = ft_strchr(*line, '\n')))
+			*tmp = 0;
 	}
-	return ((ret <= 0) ? ret : 1);
+	return (ret);
 }
