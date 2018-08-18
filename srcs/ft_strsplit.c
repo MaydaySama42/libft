@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdalil <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 02:48:56 by mdalil            #+#    #+#             */
-/*   Updated: 2017/11/13 05:43:41 by mdalil           ###   ########.fr       */
+/*   Updated: 2018/08/18 19:04:32 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*get_word(char *str, char *c, int *i)
 		{
 			while (str[(*i) + j] && !is_char(str[(*i) + j], c))
 				j++;
-			dup = ft_strndup(str + (*i), j);
+			dup = ft_strndup(str + (*i), j, 0);
 			(*i) += j;
 			return (dup);
 		}
