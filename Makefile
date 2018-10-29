@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mdalil <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/16 13:54:48 by mdalil            #+#    #+#              #
-#    Updated: 2017/11/13 00:22:09 by mdalil           ###   ########.fr        #
+#    Updated: 2018/08/18 21:17:50 by mdalil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_isascii.c\
 		ft_isdigit.c\
 		ft_isprint.c\
+		ft_itoa.c\
 		ft_lltoa_base.c\
 		ft_memalloc.c\
 		ft_memccpy.c\
@@ -42,6 +43,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_putstr_fd.c\
 		ft_putstr.c\
 		ft_recursive_power.c\
+		ft_str_isdigit.c\
 		ft_str_isempty.c\
 		ft_strcat.c\
 		ft_strchr.c\
@@ -51,11 +53,13 @@ SRC_LIBFT = ft_atoi.c\
 		ft_strdel.c\
 		ft_strdup.c\
 		ft_strequ.c\
+		ft_strjoin_free.c\
 		ft_strjoin.c\
 		ft_strlen.c\
 		ft_strncat.c\
 		ft_strncmp.c\
 		ft_strncpy.c\
+		ft_strndup.c\
 		ft_strndup.c\
 		ft_strnequ.c\
 		ft_strnew.c\
@@ -63,6 +67,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_strrchr.c\
 		ft_strrev.c\
 		ft_strsplit.c\
+		ft_strstart.c\
 		ft_strstr.c\
 		ft_strsub.c\
 		ft_strtrim.c\
@@ -73,7 +78,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_printfast_flag.c\
 		ft_printfast.c\
 		get_next_line.c\
-		read_stdin.c
+		read_stdin.c\
 
 SRC = $(addprefix $(SRC_LIBFT_PATH)/,$(SRC_LIBFT))
 

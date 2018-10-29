@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_str_isdigit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/18 18:35:38 by mdalil            #+#    #+#             */
-/*   Updated: 2018/08/18 19:05:34 by mdalil           ###   ########.fr       */
+/*   Created: 2018/08/13 12:23:37 by mdalil            #+#    #+#             */
+/*   Updated: 2018/08/13 12:26:10 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strndup(const char *s, int n, int for_free)
+int	ft_str_isdigit(char *str)
 {
 	int	i;
-	char	*str;
 
 	i = 0;
-	if (n == 0)
-		return ((char*)s);
-	str = malloc(sizeof(*str) * n + 1);
-	while (s[i] && i < n)
+	while (str[i])
 	{
-		str[i] = s[i];
+		if (!ft_isdigit(str[i]))
+			return (0);
 		i++;
 	}
-	str[i] = '\0';
-	if (for_free)
-		free((char*)s);
-	return (str);
+	return (1);
 }
