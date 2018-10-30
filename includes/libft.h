@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mayday <mayday@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:04:25 by mdalil            #+#    #+#             */
-/*   Updated: 2018/08/18 18:39:52 by mdalil           ###   ########.fr       */
+/*   Updated: 2018/10/30 00:58:44 by mayday           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *str, const char *find, size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strrev(char *str);
+char				**ft_strsplit_token(char *s, char *c);
 char				**ft_strsplit(char *s, char *c);
 int		            ft_strstart(char *start, char *str);
 char				*ft_strstr(const char *str, const char *find);

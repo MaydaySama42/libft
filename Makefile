@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+         #
+#    By: mayday <mayday@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/16 13:54:48 by mdalil            #+#    #+#              #
-#    Updated: 2018/08/18 21:17:50 by mdalil           ###   ########.fr        #
+#    Updated: 2018/10/30 00:58:07 by mayday           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC_LIBFT = ft_atoi.c\
 		ft_strnstr.c\
 		ft_strrchr.c\
 		ft_strrev.c\
+		ft_strsplit_token.c\
 		ft_strsplit.c\
 		ft_strstart.c\
 		ft_strstr.c\
