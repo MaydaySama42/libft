@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit_token.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayday <mayday@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 02:48:56 by mdalil            #+#    #+#             */
-/*   Updated: 2018/10/30 01:29:39 by mayday           ###   ########.fr       */
+/*   Updated: 2018/10/30 22:44:03 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ static char	*get_word(char **s, char *c)
 					break ;
 				j++;
 			}
-			dup = ft_strndup(*s, j, 0);
+			dup = ft_strndup(*s, j);
 			*s += j;
 			return (dup);
 		}

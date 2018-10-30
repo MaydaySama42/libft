@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mayday <mayday@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdalil <mdalil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:04:25 by mdalil            #+#    #+#             */
-/*   Updated: 2018/10/30 00:58:44 by mayday           ###   ########.fr       */
+/*   Updated: 2018/10/30 22:58:28 by mdalil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ size_t				ft_strlen(const char *str);
 char				*ft_strncat(char *dest, const char *src, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
-char	            *ft_strndup(const char *s, int n, int for_free);
+char	            *ft_strndup(const char *s, int n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *str, const char *find, size_t len);
